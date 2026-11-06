@@ -1,0 +1,1028 @@
+# Copyright (C) Web-Nest
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Injellik Recommendations\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: injellik-recommendations\n"
+
+#: blocks/recommendations/editor.js:14
+msgid "Block and shortcode settings"
+msgstr ""
+
+#: blocks/recommendations/editor.js:15 includes/admin/class-injellik-admin.php:760
+msgid "Home page"
+msgstr ""
+
+#: blocks/recommendations/editor.js:16 includes/admin/class-injellik-admin.php:756
+msgid "Product page"
+msgstr ""
+
+#: blocks/recommendations/editor.js:17 includes/admin/class-injellik-admin.php:757
+msgid "Cart"
+msgstr ""
+
+#: blocks/recommendations/editor.js:18 includes/admin/class-injellik-admin.php:758
+msgid "Order confirmation"
+msgstr ""
+
+#: blocks/recommendations/editor.js:19 includes/admin/class-injellik-admin.php:759
+msgid "Shop and category pages"
+msgstr ""
+
+#: blocks/recommendations/editor.js:23 includes/class-injellik-config.php:316
+msgid "Viewed together"
+msgstr ""
+
+#: blocks/recommendations/editor.js:24 includes/class-injellik-config.php:321
+msgid "Bought together"
+msgstr ""
+
+#: blocks/recommendations/editor.js:25 includes/class-injellik-config.php:326 includes/class-injellik-recommender.php:303
+msgid "Similar products"
+msgstr ""
+
+#: blocks/recommendations/editor.js:26 includes/class-injellik-config.php:331
+msgid "Personalized"
+msgstr ""
+
+#: blocks/recommendations/editor.js:27 includes/class-injellik-config.php:336
+msgid "Customers like you"
+msgstr ""
+
+#: blocks/recommendations/editor.js:28 includes/class-injellik-config.php:341
+msgid "Most viewed"
+msgstr ""
+
+#: blocks/recommendations/editor.js:29 includes/class-injellik-config.php:346 includes/class-injellik-recommender.php:310
+msgid "Best sellers"
+msgstr ""
+
+#: blocks/recommendations/editor.js:32
+msgid "Placement setting"
+msgstr ""
+
+#: blocks/recommendations/editor.js:43
+msgid "Recommendations"
+msgstr ""
+
+#: blocks/recommendations/editor.js:45
+msgid "Placement"
+msgstr ""
+
+#: blocks/recommendations/editor.js:46
+msgid "The block uses the settings of this placement (Injellik > Settings > Blocks), unless you change them below."
+msgstr ""
+
+#: blocks/recommendations/editor.js:52 includes/admin/views/dashboard.php:125 includes/admin/views/placements-form.php:40
+msgid "Strategy"
+msgstr ""
+
+#: blocks/recommendations/editor.js:58 includes/admin/views/placements-form.php:55
+msgid "Fallback"
+msgstr ""
+
+#: blocks/recommendations/editor.js:60 includes/admin/views/placements-form.php:57
+msgid "None"
+msgstr ""
+
+#: blocks/recommendations/editor.js:64 includes/admin/views/placements-form.php:65
+msgid "Products"
+msgstr ""
+
+#: blocks/recommendations/editor.js:65
+msgid "0: setting of the placement."
+msgstr ""
+
+#: blocks/recommendations/editor.js:72 includes/admin/views/placements-form.php:70
+msgid "Title"
+msgstr ""
+
+#: blocks/recommendations/editor.js:78
+msgid "Source products (ids)"
+msgstr ""
+
+#: blocks/recommendations/editor.js:79
+msgid "Optional, separated by commas. By default: the product displayed, or the products of the cart or of the order."
+msgstr ""
+
+#: blocks/recommendations/editor.js:87 includes/class-injellik-privacy.php:23
+msgid "Injellik recommendations"
+msgstr ""
+
+#: blocks/recommendations/editor.js:91
+msgid "products"
+msgstr ""
+
+#: blocks/recommendations/editor.js:95
+msgid "The recommended products depend on each visitor: they are displayed on the site."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:45 includes/admin/class-injellik-admin.php:46
+msgid "Injellik"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:53
+msgid "Injellik dashboard"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:53 includes/admin/views/dashboard.php:12
+msgid "Dashboard"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:54
+msgid "Injellik settings"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:54 includes/admin/class-injellik-admin.php:70 includes/admin/views/api-state.php:36 includes/admin/views/dashboard.php:26 includes/admin/views/onboarding.php:157 includes/admin/views/settings.php:12
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:87
+msgid "Copied"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:147
+msgid "Injellik Recommendations is installed."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:148
+msgid "Connect your shop to start recommending products."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:150
+msgid "Start the setup"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:192
+msgid "You are not allowed to change the Injellik settings."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:327 includes/admin/class-injellik-admin.php:437
+msgid "The API URL is not valid."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:331
+msgid "The licence key is required."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:333
+msgid "This licence key is not valid: it starts with \"ijk_lic_\", followed by 40 characters (digits and letters a to f). Copy it again from your web-nest.fr account."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:336
+msgid "The login and the password are required."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:365
+msgid "The API cannot be reached: %s"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:394
+msgid "The API rejected the login or the password."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:394
+msgid "Authentication failed: %s"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:401
+msgid "Connection successful."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:481
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:533
+msgid "%d product synchronised."
+msgid_plural "%d products synchronised."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-injellik-admin.php:535
+msgid "%1$d / %2$d products"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:574
+msgid "%d order imported."
+msgid_plural "%d orders imported."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-injellik-admin.php:576
+msgid "%1$d / %2$d orders"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:591
+msgid "%1$d sent, %2$d failed, %3$d pending"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:745
+msgid "Welcome"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:746 includes/admin/views/settings.php:16
+msgid "Connection"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:747 includes/admin/views/dashboard.php:55 includes/admin/views/settings.php:55
+msgid "Catalog"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:748 includes/admin/views/settings.php:74
+msgid "Order history"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:749 includes/admin/views/settings.php:17
+msgid "Blocks"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:750
+msgid "Done"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:756
+msgid "Below the product summary, after the tabs."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:757
+msgid "Below the cart, computed from the products in the cart (classic cart and cart block)."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:758
+msgid "On the \"thank you\" page, computed from the products ordered."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:759
+msgid "Below the product list of the shop, categories and tags."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:760
+msgid "Personalized selection, inserted with the block or the shortcode placement=\"home\"."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:761
+msgid "Block and shortcode"
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:761
+msgid "Settings of the Injellik blocks and shortcodes that do not name a placement."
+msgstr ""
+
+#: includes/admin/class-injellik-admin.php:786
+msgid "Not configured."
+msgstr ""
+
+#: includes/admin/views/api-state.php:18 includes/class-injellik-config.php:243
+msgid "Your Injellik subscription is suspended."
+msgstr ""
+
+#: includes/admin/views/api-state.php:20
+msgid "The recommendation blocks are hidden and the events are kept in your shop: they will be sent as soon as the subscription is active again."
+msgstr ""
+
+#: includes/admin/views/api-state.php:23
+msgid "since %s"
+msgstr ""
+
+#: includes/admin/views/api-state.php:26
+msgid "Manage my subscription"
+msgstr ""
+
+#: includes/admin/views/api-state.php:32 includes/class-injellik-config.php:246
+msgid "Invalid or revoked licence key."
+msgstr ""
+
+#: includes/admin/views/api-state.php:34
+msgid "The recommendation blocks are hidden until a valid key is saved in the Connection tab."
+msgstr ""
+
+#: includes/admin/views/api-state.php:38 includes/admin/views/connection-form.php:39
+msgid "Find my key"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:28
+msgid "Licence key"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:35
+msgid "A key is saved. Leave the field empty to keep it."
+msgstr ""
+
+#: includes/admin/views/connection-form.php:37
+msgid "The key of this shop, displayed in your web-nest.fr account."
+msgstr ""
+
+#: includes/admin/views/connection-form.php:40 includes/admin/views/onboarding.php:66
+msgid "Get a key"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:48 includes/admin/views/settings.php:192
+msgid "API URL"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:56
+msgid "Login"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:63
+msgid "Password"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:66
+msgid "Unchanged"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:72
+msgid "Account created before the subscriptions? Use an API login"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:73
+msgid "Use a licence key"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:79
+msgid "Testing…"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:79
+msgid "Test the connection"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:80
+msgid "Save and continue"
+msgstr ""
+
+#: includes/admin/views/connection-form.php:80 includes/admin/views/placements-form.php:82 includes/admin/views/settings.php:252
+msgid "Save"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:17 includes/admin/views/dashboard.php:154
+msgid "sent"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:18 includes/admin/views/dashboard.php:155
+msgid "pending"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:19
+msgid "error"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:32
+msgid "Injellik API"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:34
+msgid "Connected"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:36
+msgid "%d ms"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:38
+msgid "Unavailable"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:43
+msgid "Events (24 h)"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:48
+msgid "last sent: %s"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:50
+msgid "nothing sent yet"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:57
+msgid "%1$d / %2$d"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:58
+msgid "never synchronised"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:61 includes/admin/views/onboarding.php:146 includes/admin/views/settings.php:102
+msgid "Background tasks"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:62
+msgid "never"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:64
+msgid "%d orders imported"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:72
+msgid "Last error (%s):"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:79
+msgid "Dismiss"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:87
+msgid "Tracked activity"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:89
+msgid "%1$s events, %2$d days"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:92
+msgid "Events per day"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:113
+msgid "No events yet. Visit a product page of your shop to record a first view."
+msgstr ""
+
+#: includes/admin/views/dashboard.php:120 includes/admin/views/settings.php:47
+msgid "Recommendation blocks"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:120
+msgid "30 days"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:124
+msgid "Block"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:126
+msgid "Impressions"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:127
+msgid "Clicks"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:128
+msgid "CTR"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:137
+msgid "disabled"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:152
+msgid "Event queue"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:156
+msgid "in error"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:162
+msgid "Send now"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:168
+msgid "Retry the errors"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:174
+msgid "Latest errors"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:194 includes/class-injellik-recommender.php:308
+msgid "Most viewed products"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:195
+msgid "Most ordered products"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:199
+msgid "30 days, from Injellik"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:220
+msgid "No data yet."
+msgstr ""
+
+#: includes/admin/views/dashboard.php:228
+msgid "Latest events"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:233
+msgid "Date"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:234
+msgid "Action"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:235
+msgid "Product"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:236
+msgid "Visitor"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:237
+msgid "Status"
+msgstr ""
+
+#: includes/admin/views/dashboard.php:258
+msgid "No events yet."
+msgstr ""
+
+#. translators: %s: version
+#: includes/admin/views/header.php:17
+msgid "Version %s"
+msgstr ""
+
+#: includes/admin/views/header.php:39
+msgid "Settings saved."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:12
+msgid "Getting started"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:42
+msgid "Recommend the right products to each visitor"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:43
+msgid "Injellik learns from the behaviour of your visitors (products viewed, added to cart, ordered) and displays recommendation blocks on your pages. Setup takes about five minutes."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:48
+msgid "1. Tracking"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:49
+msgid "Views, carts and orders are recorded in your shop and sent to Injellik in the background. Your pages are never slowed down, even if the API is unavailable."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:53
+msgid "2. Learning"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:54
+msgid "Every night, Injellik computes which products are viewed and bought together and which products are similar."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:58
+msgid "3. Recommendations"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:59
+msgid "Blocks on the product, cart and confirmation pages, or anywhere with the Injellik block or shortcode, using the product cards of your theme."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:65
+msgid "You need an Injellik licence key, provided with a subscription on web-nest.fr."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:71
+msgid "Start"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:75
+msgid "Connect your shop to Injellik"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:76
+msgid "Paste the licence key of this shop. It is stored in your shop settings and only used by the server."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:80
+msgid "Synchronise your catalog"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:81
+msgid "Your products (name, price, categories, tags, brand) are sent to Injellik so that it can recommend them and compute similar products. Later changes are synchronised automatically."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:86 includes/admin/views/settings.php:65
+msgid "%d product in this shop"
+msgid_plural "%d products in this shop"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/views/onboarding.php:89
+msgid "last synchronisation: %s"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:95
+msgid "Synchronise again"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:95
+msgid "Synchronise"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:100 includes/admin/views/onboarding.php:126
+msgid "Back"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:101 includes/admin/views/onboarding.php:128
+msgid "Continue"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:105
+msgid "Import your order history"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:106
+msgid "Past orders give Injellik a head start: \"bought together\" recommendations are available after the next training instead of after weeks of tracking. Customers are identified by an anonymous hash, no personal data is sent. Imported orders are not counted in your subscription."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:110 includes/admin/views/settings.php:85
+msgid "Orders placed since"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:113
+msgid "%d paid order in total"
+msgid_plural "%d paid orders in total"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/views/onboarding.php:119 includes/admin/views/settings.php:81
+msgid "Last import: %s"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:122 includes/admin/views/settings.php:90
+msgid "Import the orders"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:127
+msgid "Skip this step"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:132
+msgid "Choose where to display recommendations"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:133
+msgid "Enable the blocks you want. Each block uses a strategy, and a fallback strategy while Injellik is still learning. You can change everything later."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:139
+msgid "Injellik is ready"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:140
+msgid "Tracking is active. Recommendations based on behaviour appear after the next nightly training; until then the blocks use the fallback strategy."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:147
+msgid "WP-Cron retries the events that could not be sent and synchronises the catalog every night. If WP-Cron is disabled on your server, schedule the URL shown in Settings > Data."
+msgstr ""
+
+#: includes/admin/views/onboarding.php:151
+msgid "Add blocks anywhere"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:152
+msgid "Insert the \"Injellik recommendations\" block in the editor, or the shortcode:"
+msgstr ""
+
+#: includes/admin/views/onboarding.php:158
+msgid "Open the dashboard"
+msgstr ""
+
+#: includes/admin/views/placements-form.php:33
+msgid "block / shortcode"
+msgstr ""
+
+#: includes/admin/views/placements-form.php:79
+msgid "The fallback strategy completes the block while Injellik is still learning, or when the main strategy does not return enough products."
+msgstr ""
+
+#: includes/admin/views/placements-form.php:82
+msgid "Save and finish"
+msgstr ""
+
+#: includes/admin/views/settings.php:18
+msgid "Data"
+msgstr ""
+
+#: includes/admin/views/settings.php:19
+msgid "Integration"
+msgstr ""
+
+#: includes/admin/views/settings.php:20
+msgid "Advanced"
+msgstr ""
+
+#: includes/admin/views/settings.php:35
+msgid "Injellik account"
+msgstr ""
+
+#: includes/admin/views/settings.php:39
+msgid "Want to see the wizard again?"
+msgstr ""
+
+#: includes/admin/views/settings.php:40
+msgid "Restart the onboarding"
+msgstr ""
+
+#: includes/admin/views/settings.php:60
+msgid "%1$d products sent on %2$s."
+msgstr ""
+
+#: includes/admin/views/settings.php:62
+msgid "The catalog has never been synchronised."
+msgstr ""
+
+#: includes/admin/views/settings.php:69
+msgid "Synchronise the catalog"
+msgstr ""
+
+#: includes/admin/views/settings.php:78
+msgid "%1$d orders imported, %2$d remaining."
+msgstr ""
+
+#: includes/admin/views/settings.php:96
+msgid "Restart the import from the first order"
+msgstr ""
+
+#: includes/admin/views/settings.php:98
+msgid "Only the paid orders are imported, with their real date. Orders older than 3 years are ignored by Injellik."
+msgstr ""
+
+#: includes/admin/views/settings.php:104
+msgid "WP-Cron sends the pending events every 10 minutes, purges the old ones and synchronises the catalog every night."
+msgstr ""
+
+#: includes/admin/views/settings.php:107
+msgid "Last run: %s."
+msgstr ""
+
+#: includes/admin/views/settings.php:111
+msgid "WP-Cron is disabled on this site (DISABLE_WP_CRON): schedule the URLs below with the cron of your server."
+msgstr ""
+
+#: includes/admin/views/settings.php:113
+msgid "Server cron (optional, recommended when WP-Cron is disabled or the site has little traffic):"
+msgstr ""
+
+#: includes/admin/views/settings.php:116 includes/admin/views/settings.php:120
+msgid "Copy"
+msgstr ""
+
+#: includes/admin/views/settings.php:122
+msgid "With WP-CLI:"
+msgstr ""
+
+#: includes/admin/views/settings.php:127
+msgid "Generate a new token"
+msgstr ""
+
+#: includes/admin/views/settings.php:135
+msgid "Editor block"
+msgstr ""
+
+#: includes/admin/views/settings.php:136
+msgid "In the block editor or the site editor, insert the \"Injellik recommendations\" block (WooCommerce category). Choose a placement to reuse its settings, or set the strategy, the number of products and the title of the block."
+msgstr ""
+
+#: includes/admin/views/settings.php:140
+msgid "Shortcode"
+msgstr ""
+
+#: includes/admin/views/settings.php:148
+msgid "Parameter"
+msgstr ""
+
+#: includes/admin/views/settings.php:149
+msgid "Values"
+msgstr ""
+
+#: includes/admin/views/settings.php:150
+msgid "Default"
+msgstr ""
+
+#: includes/admin/views/settings.php:155 includes/admin/views/settings.php:156 includes/admin/views/settings.php:157 includes/admin/views/settings.php:158
+msgid "that of the placement"
+msgstr ""
+
+#: includes/admin/views/settings.php:156
+msgid "a strategy, or \"none\""
+msgstr ""
+
+#: includes/admin/views/settings.php:158
+msgid "text"
+msgstr ""
+
+#: includes/admin/views/settings.php:159
+msgid "one or several ids separated by commas"
+msgstr ""
+
+#: includes/admin/views/settings.php:159
+msgid "product displayed, products of the order or of the cart"
+msgstr ""
+
+#: includes/admin/views/settings.php:162
+msgid "A block that names its placement is displayed even when the automatic display of this placement is disabled."
+msgstr ""
+
+#: includes/admin/views/settings.php:166
+msgid "In a theme"
+msgstr ""
+
+#: includes/admin/views/settings.php:172
+msgid "To change the HTML of the blocks, copy the template into your theme:"
+msgstr ""
+
+#: includes/admin/views/settings.php:175
+msgid "Keep the data-injellik-placement attribute on the root element: it is used to measure the clicks."
+msgstr ""
+
+#: includes/admin/views/settings.php:176
+msgid "The blocks are loaded after the page. Each time a block is inserted, an event is dispatched on document:"
+msgstr ""
+
+#: includes/admin/views/settings.php:195
+msgid "Only change it when Web-Nest asks you to."
+msgstr ""
+
+#: includes/admin/views/settings.php:199
+msgid "Display of the blocks"
+msgstr ""
+
+#: includes/admin/views/settings.php:202
+msgid "Asynchronous (recommended)"
+msgstr ""
+
+#: includes/admin/views/settings.php:203
+msgid "The blocks are loaded after the page: no slowdown, compatible with the page caches."
+msgstr ""
+
+#: includes/admin/views/settings.php:204
+msgid "In the page"
+msgstr ""
+
+#: includes/admin/views/settings.php:205
+msgid "The API is called while the page is generated: visible without JavaScript, but slower and not personalized behind a page cache."
+msgstr ""
+
+#: includes/admin/views/settings.php:210
+msgid "Sending of the events"
+msgstr ""
+
+#: includes/admin/views/settings.php:213
+msgid "At the end of the request (recommended)"
+msgstr ""
+
+#: includes/admin/views/settings.php:214
+msgid "Background task only"
+msgstr ""
+
+#: includes/admin/views/settings.php:215
+msgid "With PHP-FPM, the events are sent after the page has been delivered to the visitor. Choose the background task if PHP runs as an Apache module."
+msgstr ""
+
+#: includes/admin/views/settings.php:220
+msgid "API timeout"
+msgstr ""
+
+#: includes/admin/views/settings.php:223
+msgid "For the calls made while displaying a block. The back office and the background tasks wait up to 20 s."
+msgstr ""
+
+#: includes/admin/views/settings.php:227
+msgid "Recommendation cache"
+msgstr ""
+
+#: includes/admin/views/settings.php:230
+msgid "Object cache when there is one, transients otherwise. Personalized recommendations are kept 60 s at most, and only with a persistent object cache."
+msgstr ""
+
+#: includes/admin/views/settings.php:234
+msgid "Columns"
+msgstr ""
+
+#: includes/admin/views/settings.php:237
+msgid "Products per row in the blocks, like the product lists of your theme."
+msgstr ""
+
+#: includes/admin/views/settings.php:241
+msgid "Options"
+msgstr ""
+
+#: includes/admin/views/settings.php:244
+msgid "Hide the out-of-stock products (the products on backorder stay)"
+msgstr ""
+
+#: includes/admin/views/settings.php:245
+msgid "Ignore the bots (user agent filter)"
+msgstr ""
+
+#: includes/admin/views/settings.php:246
+msgid "Send a product to Injellik when it is saved"
+msgstr ""
+
+#: includes/admin/views/settings.php:247
+msgid "Synchronise the whole catalog every night"
+msgstr ""
+
+#: includes/class-injellik-config.php:317
+msgid "Products viewed in the same sessions as the current product(s)."
+msgstr ""
+
+#: includes/class-injellik-config.php:322
+msgid "Products ordered with the current product(s)."
+msgstr ""
+
+#: includes/class-injellik-config.php:327
+msgid "Products with close categories, brand and price."
+msgstr ""
+
+#: includes/class-injellik-config.php:332
+msgid "Based on the recent activity of the visitor."
+msgstr ""
+
+#: includes/class-injellik-config.php:337
+msgid "What customers with similar purchases also bought."
+msgstr ""
+
+#: includes/class-injellik-config.php:342
+msgid "Most viewed products over the last 30 days."
+msgstr ""
+
+#: includes/class-injellik-config.php:347
+msgid "Most ordered products over the last 30 days."
+msgstr ""
+
+#: includes/class-injellik-cron.php:36
+msgid "Every 10 minutes (Injellik)"
+msgstr ""
+
+#: includes/class-injellik-plugin.php:52
+msgid "Injellik Recommendations requires WooCommerce."
+msgstr ""
+
+#: includes/class-injellik-privacy.php:63
+msgid "The actions could not be deleted in Injellik: %s"
+msgstr ""
+
+#: includes/class-injellik-privacy.php:78
+msgid "To recommend products, this shop records the products you view, add to your cart, order and rate, and sends them to Injellik (Web-Nest), its recommendation service. You are identified by a pseudonymous identifier: a random identifier stored in the injellik_vid cookie, or a hash of your customer account. Your name, e-mail address, postal address and IP address are never sent. The injellik_sid cookie identifies your visit and expires after 30 minutes of inactivity."
+msgstr ""
+
+#: includes/class-injellik-recommender.php:299
+msgid "Customers who viewed this product also viewed"
+msgstr ""
+
+#: includes/class-injellik-recommender.php:301
+msgid "Frequently bought together"
+msgstr ""
+
+#: includes/class-injellik-recommender.php:306
+msgid "Selected for you"
+msgstr ""
+
+#: includes/class-injellik-recommender.php:313
+msgid "You may also like"
+msgstr ""
+
+#: injellik-recommendations.php
+msgid "Injellik Recommendations"
+msgstr ""
+
+#: injellik-recommendations.php
+msgid "Personalized product recommendations powered by the Injellik API: tracks views, carts and orders, and displays recommendation blocks on your pages."
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block title"
+msgid "Injellik recommendations"
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block description"
+msgid "Personalized product recommendations computed by Injellik."
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block keyword"
+msgid "recommendations"
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block keyword"
+msgid "products"
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block keyword"
+msgid "injellik"
+msgstr ""
+
+#: blocks/recommendations/block.json
+msgctxt "block keyword"
+msgid "cross-sell"
+msgstr ""

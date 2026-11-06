@@ -1,0 +1,16 @@
+/**
+ * Injellik Recommendations for WooCommerce.
+ * The blocks use the product loop of the theme; only the placeholder and the spacing need a style.
+ */
+.injellik-reco-placeholder {
+  min-height: 1px;
+}
+
+.injellik-reco {
+  clear: both;
+  margin: 2em 0;
+}
+
+.injellik-reco__title {
+  margin-bottom: 1em;
+}

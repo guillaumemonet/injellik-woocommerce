@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+jobs:
+  lint:
+    name: PHP ${{ matrix.php }} syntax
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - run: find injellik-recommendations -name '*.php' -print0 | xargs -0 -n1 php -l
+
+  translations:
+    name: Translations up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+      - name: The .pot matches the sources and the compiled files match the .po
+        run: |
+          php bin/i18n.php pot
+          php bin/i18n.php compile
+          # The revision date of the JSON file changes at each compilation.
+          git diff --exit-code -- . ':(exclude)*.json' || { echo "Run: php bin/i18n.php pot && php bin/i18n.php update && php bin/i18n.php compile"; exit 1; }
+
+  install:
+    name: Install on WordPress and WooCommerce
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start WordPress
+        run: docker compose up -d
+      - name: Install WordPress, WooCommerce and the plugin
+        run: |
+          for i in $(seq 1 60); do
+            if docker compose exec -T wordpress test -f /var/www/html/wp-config.php; then break; fi
+            sleep 2
+          done
+          wp() { docker compose run --rm -T cli wp "$@"; }
+          wp core install --url=http://localhost:8092 --title=CI --admin_user=admin --admin_password=admin --admin_email=ci@example.com --skip-email
+          wp plugin install woocommerce --activate
+          wp option update woocommerce_coming_soon no
+          wp plugin activate injellik-recommendations
+      - name: Check tables, scheduled tasks and block
+        run: |
+          docker compose run --rm -T cli wp eval '
+            global $wpdb;
+            foreach ( array( "injellik_events", "injellik_stats" ) as $table ) {
+              if ( ! $wpdb->get_var( "SHOW TABLES LIKE \"{$wpdb->prefix}{$table}\"" ) ) { fwrite( STDERR, "missing table $table\n" ); exit( 1 ); }
+            }
+            foreach ( array( Injellik_Cron::HOOK_EVENTS, Injellik_Cron::HOOK_DAILY ) as $hook ) {
+              if ( ! wp_next_scheduled( $hook ) ) { fwrite( STDERR, "missing cron $hook\n" ); exit( 1 ); }
+            }
+            if ( ! WP_Block_Type_Registry::get_instance()->is_registered( "injellik/recommendations" ) ) { fwrite( STDERR, "missing block\n" ); exit( 1 ); }
+            echo "OK\n";'
+          docker compose run --rm -T cli wp injellik status
+      - name: Check the back-office pages and the shop
+        run: |
+          B=http://localhost:8092
+          curl -s -c jar -b jar -o /dev/null $B/wp-login.php
+          curl -s -c jar -b jar -o /dev/null -d "log=admin&pwd=admin&testcookie=1" $B/wp-login.php
+          curl -s -c jar -b jar "$B/wp-admin/admin.php?page=injellik-settings" | grep -q 'injellik-onboarding'
+          curl -s -c jar -b jar "$B/wp-admin/admin.php?page=injellik-settings&onboarding=1&step=connection" | grep -q 'js-injellik-connection'
+          curl -sf -o /dev/null $B/
+          curl -s -o /dev/null -w "%{http_code}" -d "type=view&product_id=1" "$B/?wc-ajax=injellik_track" | grep -q 204
+          if docker compose exec -T wordpress sh -c 'grep -i "injellik" wp-content/debug.log'; then exit 1; fi
+      - name: Uninstall
+        run: |
+          docker compose run --rm -T cli wp eval 'define( "WP_UNINSTALL_PLUGIN", true ); include WP_PLUGIN_DIR . "/injellik-recommendations/uninstall.php"; global $wpdb; if ( $wpdb->get_var( "SHOW TABLES LIKE \"%injellik%\"" ) || get_option( "injellik_settings" ) ) { fwrite( STDERR, "uninstall left data\n" ); exit( 1 ); } echo "uninstall OK\n";'
+      - if: failure()
+        run: docker compose exec -T wordpress sh -c 'tail -50 wp-content/debug.log' || true
+
+  release:
+    name: Release archive
+    needs: [install, translations]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - id: build
+        run: echo "zip=$(./build.sh)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: injellik-recommendations
+          path: ${{ steps.build.outputs.zip }}
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.build.outputs.zip }}
+          generate_release_notes: true

@@ -1,0 +1,98 @@
+{
+    "translation-revision-date": "2026-11-06 21:22+0000",
+    "generator": "bin/i18n.php",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Block and shortcode settings": [
+                "Réglages des blocs et shortcodes"
+            ],
+            "Home page": [
+                "Page d'accueil"
+            ],
+            "Product page": [
+                "Fiche produit"
+            ],
+            "Cart": [
+                "Panier"
+            ],
+            "Order confirmation": [
+                "Confirmation de commande"
+            ],
+            "Shop and category pages": [
+                "Boutique et catégories"
+            ],
+            "Viewed together": [
+                "Consultés ensemble"
+            ],
+            "Bought together": [
+                "Achetés ensemble"
+            ],
+            "Similar products": [
+                "Produits similaires"
+            ],
+            "Personalized": [
+                "Personnalisées"
+            ],
+            "Customers like you": [
+                "Clients similaires"
+            ],
+            "Most viewed": [
+                "Les plus consultés"
+            ],
+            "Best sellers": [
+                "Meilleures ventes"
+            ],
+            "Placement setting": [
+                "Réglage de l'emplacement"
+            ],
+            "Recommendations": [
+                "Recommandations"
+            ],
+            "Placement": [
+                "Emplacement"
+            ],
+            "The block uses the settings of this placement (Injellik > Settings > Blocks), unless you change them below.": [
+                "Le bloc reprend les réglages de cet emplacement (Injellik > Réglages > Blocs), sauf ceux que vous modifiez ci-dessous."
+            ],
+            "Strategy": [
+                "Stratégie"
+            ],
+            "Fallback": [
+                "Repli"
+            ],
+            "None": [
+                "Aucune"
+            ],
+            "Products": [
+                "Produits"
+            ],
+            "0: setting of the placement.": [
+                "0 : réglage de l'emplacement."
+            ],
+            "Title": [
+                "Titre"
+            ],
+            "Source products (ids)": [
+                "Produits sources (ids)"
+            ],
+            "Optional, separated by commas. By default: the product displayed, or the products of the cart or of the order.": [
+                "Facultatif, séparés par des virgules. Par défaut : le produit affiché, ou les produits du panier ou de la commande."
+            ],
+            "Injellik recommendations": [
+                "Recommandations Injellik"
+            ],
+            "products": [
+                "produits"
+            ],
+            "The recommended products depend on each visitor: they are displayed on the site.": [
+                "Les produits recommandés dépendent de chaque visiteur : ils sont affichés sur le site."
+            ]
+        }
+    }
+}

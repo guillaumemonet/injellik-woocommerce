@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "injellik/recommendations",
+	"title": "Injellik recommendations",
+	"category": "woocommerce",
+	"icon": "chart-area",
+	"description": "Personalized product recommendations computed by Injellik.",
+	"keywords": [ "recommendations", "products", "injellik", "cross-sell" ],
+	"textdomain": "injellik-recommendations",
+	"attributes": {
+		"placement": {
+			"type": "string",
+			"default": "custom"
+		},
+		"strategy": {
+			"type": "string",
+			"default": ""
+		},
+		"fallback": {
+			"type": "string",
+			"default": "default"
+		},
+		"limit": {
+			"type": "number",
+			"default": 0
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"productIds": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"editorScript": "file:./editor.js"
+}
