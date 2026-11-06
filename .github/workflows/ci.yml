@@ -55,6 +55,9 @@ jobs:
           wp core install --url=http://localhost:8092 --title=CI --admin_user=admin --admin_password=admin --admin_email=ci@example.com --skip-email
           wp plugin install woocommerce --activate
           wp option update woocommerce_coming_soon no
+          # No redirection to the setup wizard of WooCommerce on the first back-office page.
+          wp transient delete _wc_activation_redirect
+          wp option update woocommerce_onboarding_profile '{"skipped":true}' --format=json
           wp plugin activate injellik-recommendations
       - name: Check tables, scheduled tasks and block
         run: |
