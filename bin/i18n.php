@@ -50,14 +50,16 @@ function extract_strings( $root ) {
 	$quoted  = "'(?:[^'\\\\]|\\\\.)*'";
 	$pattern = '/(?:\/\*\s*translators:\s*(?<comment>.*?)\*\/\s*(?:\?>\s*<\?php\s*)?)?\b(?<fn>_n|__|_e|esc_html__|esc_html_e|esc_attr__|esc_attr_e)\(\s*(?<s>' . $quoted . ')\s*,\s*(?:(?<p>' . $quoted . ')\s*,\s*[^,]+,\s*)?\'' . DOMAIN . '\'\s*\)/s';
 
-	$files = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $root, FilesystemIterator::SKIP_DOTS ) );
-	foreach ( $files as $file ) {
-		$ext = $file->getExtension();
-		if ( ! in_array( $ext, array( 'php', 'js' ), true ) || false !== strpos( $file->getPathname(), 'languages' ) ) {
-			continue;
+	// Sorted: the order of the directory listing depends on the system, the .pot must not.
+	$paths = array();
+	foreach ( new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $root, FilesystemIterator::SKIP_DOTS ) ) as $file ) {
+		if ( in_array( $file->getExtension(), array( 'php', 'js' ), true ) && false === strpos( $file->getPathname(), 'languages' ) ) {
+			$paths[ relative( $root, $file->getPathname() ) ] = $file->getPathname();
 		}
-		$relative = relative( $root, $file->getPathname() );
-		$source   = file_get_contents( $file->getPathname() );
+	}
+	ksort( $paths, SORT_STRING );
+	foreach ( $paths as $relative => $path ) {
+		$source = str_replace( "\r\n", "\n", file_get_contents( $path ) );
 		preg_match_all( $pattern, $source, $matches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE );
 		foreach ( $matches as $match ) {
 			$plural = isset( $match['p'] ) && '' !== $match['p'][0] ? unquote( $match['p'][0] ) : null;

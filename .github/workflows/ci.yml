@@ -72,12 +72,20 @@ jobs:
       - name: Check the back-office pages and the shop
         run: |
           B=http://localhost:8092
+          # page <url> <expected text>
+          page() {
+            local html
+            html=$(curl -sL -c jar -b jar "$1")
+            if ! grep -q "$2" <<< "$html"; then echo "::error::$1 does not contain $2"; echo "$html" | head -c 3000; exit 1; fi
+            echo "OK $1"
+          }
           curl -s -c jar -b jar -o /dev/null $B/wp-login.php
-          curl -s -c jar -b jar -o /dev/null -d "log=admin&pwd=admin&testcookie=1" $B/wp-login.php
-          curl -s -c jar -b jar "$B/wp-admin/admin.php?page=injellik-settings" | grep -q 'injellik-onboarding'
-          curl -s -c jar -b jar "$B/wp-admin/admin.php?page=injellik-settings&onboarding=1&step=connection" | grep -q 'js-injellik-connection'
-          curl -sf -o /dev/null $B/
-          curl -s -o /dev/null -w "%{http_code}" -d "type=view&product_id=1" "$B/?wc-ajax=injellik_track" | grep -q 204
+          curl -s -c jar -b jar -o /dev/null -w "login: %{http_code} %{redirect_url}\n" -d "log=admin&pwd=admin&wp-submit=Log+In&testcookie=1" $B/wp-login.php
+          page "$B/wp-admin/admin.php?page=injellik-settings" 'injellik-onboarding'
+          page "$B/wp-admin/admin.php?page=injellik-settings&onboarding=1&step=connection" 'js-injellik-connection'
+          page "$B/" '</html>'
+          code=$(curl -s -o /dev/null -w "%{http_code}" -d "type=view&product_id=1" "$B/?wc-ajax=injellik_track")
+          echo "track: $code"; test "$code" = 204
           if docker compose exec -T wordpress sh -c 'grep -i "injellik" wp-content/debug.log'; then exit 1; fi
       - name: Uninstall
         run: |
