@@ -65,7 +65,7 @@ C'est le pendant du [module PrestaShop](https://github.com/guillaumemonet/injell
 
 ## Installation
 
-1. Téléchargez **`injellik-recommendations-x.y.z.zip`** depuis la [dernière release](https://github.com/guillaumemonet/injellik-woocommerce/releases/latest).
+1. Téléchargez **`injellik-recommendations-x.y.z.zip`** depuis la [dernière release](https://github.com/guillaumemonet/injellik-woocommerce/releases/latest). Ce lien direct mène toujours à la dernière version : [`injellik-recommendations.zip`](https://github.com/guillaumemonet/injellik-woocommerce/releases/latest/download/injellik-recommendations.zip).
    > N'utilisez pas « Download ZIP » de GitHub : cette archive contient tout le dépôt, et non la seule extension.
 2. Dans l'administration, ouvrez **Extensions > Ajouter une extension > Téléverser une extension** et déposez le zip.
 3. Activez l'extension, puis ouvrez le menu **Injellik** : l'assistant démarre.

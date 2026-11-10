@@ -105,7 +105,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: build
-        run: echo "zip=$(./build.sh)" >> "$GITHUB_OUTPUT"
+        run: |
+          zip=$(./build.sh)
+          # Same archive under a fixed name: .../releases/latest/download/injellik-recommendations.zip
+          # always points to the latest version (link of the web-nest.fr site).
+          cp "$zip" dist/injellik-recommendations.zip
+          echo "zip=$zip" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         with:
           name: injellik-recommendations
@@ -113,5 +118,7 @@ jobs:
       - if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ steps.build.outputs.zip }}
+          files: |
+            ${{ steps.build.outputs.zip }}
+            dist/injellik-recommendations.zip
           generate_release_notes: true
